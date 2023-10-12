@@ -1,5 +1,8 @@
-.PHONY: clean clean-build clean-pyc clean-test coverage dist docs help install lint lint/flake8 lint/black
+.PHONY: clean clean-build clean-pyc clean-test coverage dist docs help install lint lint/flake8 lint/black run
 .DEFAULT_GOAL := help
+
+
+SCR_DIR:=$(shell pwd)/gpt_resume_reviewer
 
 define BROWSER_PYSCRIPT
 import os, webbrowser, sys
@@ -87,3 +90,6 @@ dist: clean ## builds source and wheel package
 
 install: clean ## install the package to the active Python's site-packages
 	python setup.py install
+
+run:
+	streamlit run $(SCR_DIR)/app.py
