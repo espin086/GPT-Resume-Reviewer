@@ -127,6 +127,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+env_gpt_resume_reviewer/
 
 # Spyder project settings
 .spyderproject
